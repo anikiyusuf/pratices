@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User validation</title>
+    <script src="index.js" defer></script> <!-- Link to external JavaScript file -->
+</head>
+<body>
+    
+    <h3>Password Validation</h3>
+    <p>Try to submit</p>
+    <!-- <form action="/action_page.php" method="post"> -->
+        <form>
+        <label for="name">Name:</label>
+        <input type="text" id="nameEle"  minlength="8" required>
+        <br/>
+        <label for="password">Password:</label>
+        <input type="password" id="passWordEle"  pattern="(?=.*\d)(?=.*[a-z])(?.=*[A-Z])" title="Must contain at least one number and one uppercase and lowercase, and at least 8 or more characters" required>
+        <br/>
+        <label for="confirmPassword"> Confirm Password:</label>
+        <input type="password" id="confirmPassWordEle"  pattern="(?=.*\d)(?=.*[a-z])(?.=*[A-Z])" title="Must contain at least one number and one uppercase and lowercase, and at least 8 or more characters" required>
+        <br/>
+       
+       <input type="submit"  id="submitEle" value="Submit">
+    </form>
+    <div id="message"> 
+        <h3>Password must contain the following instruction </h3>   
+        <p id="letter" class="invalid">A<b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital(uppercase)</b>letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minium<b>8 characters</b></p>
+    </div>
+    <script src="index.js"></script>
+    <!-- <h1>Displaying user details</h1> -->
+</body>
+</html>
